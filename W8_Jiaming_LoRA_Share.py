@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from torch.utils.data import Subset
 
 
-# 定义包含LoRA的改进神经网络
+
 class SimpleNNWithLoRA(nn.Module):
     def __init__(self, rank_1=160, rank_2=100):
         super(SimpleNNWithLoRA, self).__init__()
@@ -22,7 +22,7 @@ class SimpleNNWithLoRA(nn.Module):
         return x
 
 
-# 定义LoRA模块，使用Xavier初始化
+
 class LoRA(nn.Module):
     def __init__(self, input_dim, output_dim, rank=100):
         super(LoRA, self).__init__()
