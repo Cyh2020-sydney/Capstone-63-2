@@ -131,7 +131,7 @@ def train(model, data_loader, criterion, optimizer, epochs):
 
     # 计算熵值 E
     epochs_count = epochs
-    normalization_factor = -1 / (1 / np.log(abs(epochs_count)))  # 归一化因子
+    normalization_factor = -1 / (np.log(abs(epochs_count)))  # 归一化因子
     entropy_sum = 0  # 熵和的初始值
     for p_i in p:
         if p_i > 0:
